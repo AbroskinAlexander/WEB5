@@ -1,7 +1,7 @@
 package servlet;
 
 
-import AcessDB.ServiceClient;
+import AcessDB.ServiceClientHibernate;
 import model.User;
 
 import javax.servlet.ServletException;
@@ -15,18 +15,9 @@ import java.util.List;
 @WebServlet("/")
 public class MainServlet extends HttpServlet {
 
-    private ServiceClient serv;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        serv = new ServiceClient();
-        serv.createTable();
-    }
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> user = serv.getAllUser();
+        List<User> user = ServiceClientHibernate.getInstance().getAllUser();
         req.setAttribute("users", user);
         getServletContext().getRequestDispatcher("/test.jsp").forward(req, resp);
     }

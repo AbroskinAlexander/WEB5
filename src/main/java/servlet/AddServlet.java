@@ -1,6 +1,6 @@
 package servlet;
 
-import AcessDB.ServiceClient;
+import AcessDB.ServiceClientHibernate;
 import model.User;
 
 import javax.servlet.ServletException;
@@ -12,14 +12,13 @@ import java.io.IOException;
 
 @WebServlet("/add")
 public class AddServlet extends HttpServlet {
-    private ServiceClient serv;
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        serv = new ServiceClient();
-        serv.createTable();
-    }
+//      private ServiceClient serv;
+//
+//    @Override
+//    public void init() throws ServletException {
+//        super.init();
+//        serv = new ServiceClient();
+//    }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -28,7 +27,7 @@ public class AddServlet extends HttpServlet {
         String password = req.getParameter("password");
         String birthday = req.getParameter("date");
         User newUser = new User(name, surname, password, birthday);
-        serv.addUser(newUser);
+        ServiceClientHibernate.getInstance().addUser(newUser);
         resp.sendRedirect("http://localhost:8080");
     }
 

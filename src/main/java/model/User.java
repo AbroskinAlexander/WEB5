@@ -1,18 +1,29 @@
 package model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "users")
 public class User {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "surname")
     private String surname;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "birthday")
     private String birthday;
 
     public User() {
-    }
-
-    @Override
-    public String toString() {
-        return id + " " + name + " " + surname + " " + password + " " + birthday;
     }
 
     public User(String name, String surname, String password, String birthday) {
@@ -68,5 +79,10 @@ public class User {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return id + " " + name + " " + surname + " " + password + " " + birthday;
     }
 }
