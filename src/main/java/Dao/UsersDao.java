@@ -1,21 +1,24 @@
 package Dao;
 
+import Util.DBAccess;
 import model.User;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsersDao {
-    private Connection connection;
+public class UsersDao implements DaoUsers {
 
-    public UsersDao(Connection connection) {
-        this.connection = connection;
+    public UsersDao() {
+    }
+
+    private Connection getConnection(){
+        return DBAccess.getMysqlConnection();
     }
 
     public boolean addUser(User user) {
         if (!userExist(user)) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT into userslist (name, surname, password, birthday) values(?,?,?,?)")) {
+            try (PreparedStatement preparedStatement = getConnection().prepareStatement("INSERT into users (name, surname, password, birthday) values(?,?,?,?)")) {
                 preparedStatement.setString(1, user.getName());
                 preparedStatement.setString(2, user.getSurname());
                 preparedStatement.setString(3, user.getPassword());
@@ -31,8 +34,8 @@ public class UsersDao {
 
     public List<User> getAllUser() {
         List<User> res = new ArrayList<>();
-        try (Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery("SELECT * from userslist");
+        try (Statement statement = getConnection().createStatement()) {
+            ResultSet resultSet = statement.executeQuery("SELECT * from users");
             while (resultSet.next()) {
                 res.add(new User(resultSet.getLong("id"), resultSet.getString("name"), resultSet.getString("surname"), resultSet.getString("password"), resultSet.getString("birthday")));
             }
@@ -44,7 +47,7 @@ public class UsersDao {
     }
 
     public boolean userExist(User user) {
-        try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT name, surname from userslist where name=? and surname = ?")) {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement("SELECT name, surname from users where name=? and surname = ?")) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getSurname());
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -58,7 +61,7 @@ public class UsersDao {
     }
 
     public User getUserById(long id) {
-        try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * from userslist where id=?")) {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement("SELECT * from users where id=?")) {
             preparedStatement.setLong(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
@@ -74,7 +77,7 @@ public class UsersDao {
     public void updateUser(User updateUser) {
         User oldUser = getUserById(updateUser.getId());
         if (oldUser != null) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement("UPDATE userslist set name =?, surname=?,password=?,birthday=? where id= ?")) {
+            try (PreparedStatement preparedStatement = getConnection().prepareStatement("UPDATE users set name =?, surname=?,password=?,birthday=? where id= ?")) {
                 preparedStatement.setLong(5, updateUser.getId());
                 if (updateUser.getName().length() == 0) {
                     preparedStatement.setString(1, oldUser.getName());
@@ -104,7 +107,7 @@ public class UsersDao {
     }
 
     public void deletUser(long id) {
-        try (PreparedStatement preparedStatement = connection.prepareStatement("DELETE from userslist where id=?")) {
+        try (PreparedStatement preparedStatement = getConnection().prepareStatement("DELETE from users where id=?")) {
             preparedStatement.setLong(1, id);
             preparedStatement.execute();
         } catch (SQLException e) {
@@ -113,24 +116,24 @@ public class UsersDao {
     }
 
     public void deletAllUsers() {
-        try (Statement statement = connection.createStatement()) {
-            statement.execute("Delete from userslist");
+        try (Statement statement = getConnection().createStatement()) {
+            statement.execute("Delete from users");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void createTable() {
-        try (Statement stmt = connection.createStatement()) {
-            stmt.execute("create table if not exists userslist (id bigint auto_increment, name varchar(256), surname varchar(256), password varchar(256), birthday varchar (64),primary key (id))");
+        try (Statement stmt = getConnection().createStatement()) {
+            stmt.execute("create table if not exists users (id bigint auto_increment, name varchar(256), surname varchar(256), password varchar(256), birthday varchar (64),primary key (id))");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     public void dropTable() {
-        try (Statement stmt = connection.createStatement()) {
-            stmt.executeUpdate("DROP TABLE IF EXISTS userslist");
+        try (Statement stmt = getConnection().createStatement()) {
+            stmt.executeUpdate("DROP TABLE IF EXISTS users");
         } catch (SQLException e) {
             e.printStackTrace();
         }

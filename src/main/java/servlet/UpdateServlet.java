@@ -1,6 +1,6 @@
 package servlet;
 
-import AcessDB.ServiceClientHibernate;
+import AcessDB.ServiceAll;
 import model.User;
 
 import javax.servlet.ServletException;
@@ -30,7 +30,7 @@ public class UpdateServlet extends HttpServlet {
         newUser.setSurname(req.getParameter("surname"));
         newUser.setPassword(req.getParameter("password"));
         newUser.setBirthday(req.getParameter("date"));
-        ServiceClientHibernate.getInstance().updateUser(newUser);
+        ServiceAll.getInstance().updateUser(newUser);
         resp.sendRedirect("http://localhost:8080");
     }
 }

@@ -1,9 +1,10 @@
 package Dao;
 
-import AcessDB.ServiceClientHibernate;
+
 import model.User;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
@@ -11,20 +12,24 @@ import java.util.List;
 
 public class HiberUserDao implements DaoUsers {
 
-    private Session session;
+    private SessionFactory sessionFactory;
 
-    public HiberUserDao(Session session) {
-        this.session = session;
+    public HiberUserDao(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
-
+    private Session getSession(){
+        return sessionFactory.openSession();
+    }
 
     @Override
     public boolean addUser(User user) {
-        if (!ServiceClientHibernate.getInstance().userExist(user)) {
+        Session session = getSession();
+        if (!userExist(user)) {
             Transaction trx = null;
             try {
                 trx = session.beginTransaction();
                 session.save(user);
+                session.flush();
                 trx.commit();
                 return true;
             } catch (Exception e) {
@@ -41,9 +46,11 @@ public class HiberUserDao implements DaoUsers {
 
     @Override
     public List<User> getAllUser() {
+        Session session = getSession();
         session.beginTransaction();
         Criteria criteria = session.createCriteria(User.class);
         List<User> res = (List<User>) criteria.list();
+        session.flush();
         session.getTransaction().commit();
         session.close();
         return res;
@@ -51,6 +58,7 @@ public class HiberUserDao implements DaoUsers {
 
     @Override
     public boolean userExist(User user) {
+        Session session = getSession();
         Criteria criteria = session.createCriteria(User.class);
         User res = (User) criteria.add(Restrictions.eq("name", user.getName())).uniqueResult();
         session.close();
@@ -59,6 +67,7 @@ public class HiberUserDao implements DaoUsers {
 
     @Override
     public User getUserById(long id) {
+        Session session = getSession();
         Criteria criteria = session.createCriteria(User.class);
         User res = null;
         res = (User) criteria.add(Restrictions.eq("id", id)).uniqueResult();
@@ -68,7 +77,8 @@ public class HiberUserDao implements DaoUsers {
 
     @Override
     public void updateUser(User updateUser) {
-        User user = ServiceClientHibernate.getInstance().getUserById(updateUser.getId());
+        Session session = getSession();
+        User user = getUserById(updateUser.getId());
         if (user!=null) {
             Transaction trx = null;
             try {
@@ -86,6 +96,7 @@ public class HiberUserDao implements DaoUsers {
                     user.setBirthday(updateUser.getBirthday());
                 }
                 session.saveOrUpdate(user);
+                session.flush();
                 trx.commit();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -101,11 +112,13 @@ public class HiberUserDao implements DaoUsers {
 
     @Override
     public void deletUser(long id) {
-        User user = ServiceClientHibernate.getInstance().getUserById(id);
+        Session session = getSession();
+        User user = getUserById(id);
         Transaction trx = null;
         try {
             trx = session.beginTransaction();
             session.delete(user);
+            session.flush();
             trx.commit();
         } catch (Exception e) {
             e.printStackTrace();

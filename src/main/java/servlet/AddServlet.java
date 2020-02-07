@@ -1,6 +1,6 @@
 package servlet;
 
-import AcessDB.ServiceClientHibernate;
+import AcessDB.ServiceAll;
 import model.User;
 
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class AddServlet extends HttpServlet {
         String password = req.getParameter("password");
         String birthday = req.getParameter("date");
         User newUser = new User(name, surname, password, birthday);
-        ServiceClientHibernate.getInstance().addUser(newUser);
+        ServiceAll.getInstance().addUser(newUser);
         resp.sendRedirect("http://localhost:8080");
     }
 

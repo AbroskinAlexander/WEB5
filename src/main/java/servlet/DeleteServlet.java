@@ -1,6 +1,6 @@
 package servlet;
 
-import AcessDB.ServiceClientHibernate;
+import AcessDB.ServiceAll;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +22,7 @@ public class DeleteServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         long id = Long.parseLong(request.getParameter("id"));
-        ServiceClientHibernate.getInstance().deletUser(id);
+        ServiceAll.getInstance().deletUser(id);
         response.sendRedirect("http://localhost:8080");
     }
 

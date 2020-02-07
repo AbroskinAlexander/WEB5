@@ -6,8 +6,13 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 
 public class DBAccess {
+    private static Connection connection;
     private static SessionFactory sessionFactory;
 
 
@@ -40,4 +45,21 @@ public class DBAccess {
         return configuration.buildSessionFactory(serviceRegistry);
     }
 
+    public static Connection getMysqlConnection() {
+        try {
+            if (connection == null || connection.isClosed()) {
+                //   DriverManager.registerDriver((Driver)
+                Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+                String url = "jdbc:mysql://localhost:3306/web5?serverTimezone=UTC&user=root&password=1245";
+                connection = DriverManager.getConnection(url);
+                System.out.println("Get connection");
+                return connection;
+            }
+        } catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+            System.out.println("Connection Erorr");
+            e.printStackTrace();
+            throw new IllegalStateException();
+        }
+        return connection;
+    }
 }
