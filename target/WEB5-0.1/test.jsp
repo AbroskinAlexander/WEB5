@@ -1,4 +1,4 @@
-<%@ page import="model.User" %>
+<%@ page import="org.hometask.model.User" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -13,11 +13,15 @@
 </head>
 <body>
 
-<form class="your-form-selector"method="post" action="/add">
+<form class="your-form-selector" method="post" action="/add">
     <table width="100%" cellspacing="0" cellpadding="4">
         <tr>
             <td></td>
-            <td>Добовление пользователя:</td>
+            <td>Добавление пользователя:</td>
+        </tr>
+        <tr>
+            <td align="right" width="100">Email:</td>
+            <td><input type="email" name="email" maxlength="50" size="20" required placeholder></td>
         </tr>
         <tr>
             <td align="right" width="100">Имя:</td>
@@ -37,57 +41,7 @@
         </tr>
         <tr>
             <td></td>
-            <td ><input type="submit" value="Добавить пользователя"></td>
-        </tr>
-        </tr>
-    </table>
-</form>
-<form class="your-form-selector" method="post" action="/update">
-    <table width="100%" cellspacing="0" cellpadding="4">
-        <tr>
-            <td></td>
-            <td>Редактирование пользователя:</td>
-        </tr>
-        <tr>
-            <td align="right" width="100">ID:</td>
-            <td><input type="text" name="id" maxlength="50" size="20" required placeholder></td>
-        </tr>
-        <tr>
-            <td align="right" width="100">Имя:</td>
-            <td><input type="text" name="name" maxlength="50" size="20"></td>
-        </tr>
-        <tr>
-            <td align="right" width="100">Фамилия:</td>
-            <td><input type="text" name="surname" maxlength="50" size="20"></td>
-        </tr>
-        <tr>
-            <td align="right" width="100">Пароль:</td>
-            <td><input type="password" name="password" maxlength="50" size="20"></td>
-        </tr>
-        <tr>
-            <td align="right" width="100">Дата рождения:</td>
-            <td><input type="date" name="date"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td ><input type="submit" value="Подтвердить изменения"></td>
-        </tr>
-        </tr>
-    </table>
-</form>
-<form class="your-form-selector" method="post" action="/delete">
-    <table width="100%" cellspacing="0" cellpadding="4">
-        <tr>
-            <td></td>
-            <td>Удаление пользователя:</td>
-        </tr>
-        <tr>
-            <td align="right" width="100">ID:</td>
-            <td><input type="number" name="id" maxlength="50" size="20" required placeholder></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td ><input type="submit" value="Подтвердить"></td>
+            <td><input type="submit" value="Добавить пользователя"></td>
         </tr>
         </tr>
     </table>
@@ -95,8 +49,37 @@
 </br>
 
 <p><b>Список зарегистрированных пользователей:</b></p>
-<c:forEach var="list" items="${users}">
-    <p><c:out value="${list}"/></p>
-</c:forEach>
+<table border="" width="600" cellspacing="1" cellpadding="4">
+    <tr>
+        <td>ID</td>
+        <td>Email</td>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Пароль</td>
+        <td>День рождения</td>
+        <td>Удалить/Изменить</td>
+    </tr>
+    <c:forEach var="list" items="${users}">
+
+        <tr>
+            <td>${list.id}</td>
+            <td>${list.email}</td>
+            <td>${list.name}</td>
+            <td>${list.surname}</td>
+            <td>${list.password}</td>
+            <td>${list.birthday}</td>
+            <td>
+                <form method="post" action="/delete">
+                    <input type="hidden" name="id" value=${list.id}>
+                    <input type="submit" value="Delete">
+                </form>
+                <form method="get" action="/update">
+                    <input type="hidden" name="id" value=${list.id}>
+                    <input type="submit" value="Update">
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>
