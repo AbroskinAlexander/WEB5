@@ -1,7 +1,7 @@
 package org.hometask.service;
 
 import org.hometask.dao.UserDAO;
-import org.hometask.dao.UserDaoFactory;
+import org.hometask.dao.UserDAOFactory;
 import org.hometask.model.User;
 
 import java.util.List;
@@ -11,7 +11,7 @@ public class UserServiceImp implements UserService {
     private UserDAO userDao;
 
     private UserServiceImp() {
-        userDao = UserDaoFactory.getInstance().getUserDaoFactory();
+        userDao = UserDAOFactory.getInstance().getUserDaoFactory();
     }
 
     public static UserServiceImp getInstance() {

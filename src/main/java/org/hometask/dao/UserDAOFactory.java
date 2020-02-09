@@ -3,15 +3,15 @@ package org.hometask.dao;
 import java.io.IOException;
 import java.util.Properties;
 
-public class UserDaoFactory {
-    private static UserDaoFactory userDaoFactory;
+public class UserDAOFactory {
+    private static UserDAOFactory userDaoFactory;
 
-    private UserDaoFactory() {
+    private UserDAOFactory() {
     }
 
-    public static UserDaoFactory getInstance(){
+    public static UserDAOFactory getInstance(){
         if(userDaoFactory==null){
-            return new UserDaoFactory();
+            return new UserDAOFactory();
         }
         return userDaoFactory;
     }
