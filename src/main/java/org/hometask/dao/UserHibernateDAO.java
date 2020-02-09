@@ -2,7 +2,10 @@ package org.hometask.dao;
 
 
 import org.hibernate.*;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.service.ServiceRegistry;
 import org.hometask.model.User;
 import org.hometask.util.DBHelper;
 
@@ -13,7 +16,11 @@ public class UserHibernateDAO implements UserDAO {
     private SessionFactory sessionFactory;
 
     public UserHibernateDAO() {
-        this.sessionFactory = DBHelper.getSessionFactory();
+        Configuration configuration = DBHelper.getInstance().getConfiguration();
+        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder();
+        builder.applySettings(configuration.getProperties());
+        ServiceRegistry serviceRegistry = builder.build();
+        this.sessionFactory = configuration.buildSessionFactory(serviceRegistry);
     }
 
     private Session getSession() {

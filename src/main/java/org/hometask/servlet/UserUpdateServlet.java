@@ -29,7 +29,7 @@ public class UserUpdateServlet extends HttpServlet {
         List<User> newUser = new ArrayList<>();
         newUser.add(serv.getUserById(id));
         req.setAttribute("user", newUser);
-        getServletContext().getRequestDispatcher("/update.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/UserUpdatePage.jsp").forward(req, resp);
     }
 
     @Override

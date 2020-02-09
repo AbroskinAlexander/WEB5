@@ -1,23 +1,23 @@
 package org.hometask.service;
 
 import org.hometask.dao.UserDAO;
-import org.hometask.dao.UserHibernateDAO;
+import org.hometask.dao.UserDaoFactory;
 import org.hometask.model.User;
 
 import java.util.List;
 
 public class UserServiceImp implements UserService {
     private static UserServiceImp userServiceImp;
-    //выбор способа подключения
-    UserDAO userDao = new UserHibernateDAO();
-    // UserDAO userDao = new UserJdbcDAO();
+    private UserDAO userDao;
 
     private UserServiceImp() {
+        userDao = UserDaoFactory.getInstance().getUserDaoFactory();
     }
 
     public static UserServiceImp getInstance() {
         if (userServiceImp == null) {
-            return new UserServiceImp();
+            userServiceImp = new UserServiceImp();
+            return userServiceImp;
         }
         return userServiceImp;
     }

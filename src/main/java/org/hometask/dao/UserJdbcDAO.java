@@ -12,7 +12,7 @@ public class UserJdbcDAO implements UserDAO {
     private Connection connection;
 
     public UserJdbcDAO() {
-        this.connection = DBHelper.getMysqlConnection();
+        this.connection = DBHelper.getInstance().getConnection();
     }
 
     public boolean addUser(User user) {

@@ -90,6 +90,13 @@ public class User {
 
     @Override
     public String toString() {
-        return id + " " + email + " " + name + " " + surname + " " + password + " " + birthday;
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", password='" + password + '\'' +
+                ", birthday='" + birthday + '\'' +
+                '}';
     }
 }
