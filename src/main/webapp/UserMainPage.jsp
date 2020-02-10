@@ -91,5 +91,8 @@
         </tr>
     </c:forEach>
 </table>
+<form method="get" action="/logout">
+    <input type="submit" value="Выход">
+</form>
 </body>
 </html>

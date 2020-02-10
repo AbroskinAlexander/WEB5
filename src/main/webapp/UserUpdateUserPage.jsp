@@ -61,5 +61,8 @@
     </c:forEach>
     </table>
 </form>
+<form method="get" action="/logout">
+    <input type="submit" value="Выход">
+</form>
 </body>
 </html>
