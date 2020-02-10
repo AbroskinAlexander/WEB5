@@ -13,10 +13,12 @@ public interface UserDAO {
 
     User getUserById(Long id);
 
+    User getUserByEmail(String email);
+
     void updateUser(User updateUser);
 
-    void deletUser(Long id);
+    void deleteUser(Long id);
 
-    void deletAllUsers();
+    void deleteAllUsers();
 
 }

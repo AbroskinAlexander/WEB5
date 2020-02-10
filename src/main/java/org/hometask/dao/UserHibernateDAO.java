@@ -69,8 +69,18 @@ public class UserHibernateDAO implements UserDAO {
     public User getUserById(Long id) {
         Session session = getSession();
         Criteria criteria = session.createCriteria(User.class);
-        User res = null;
+        User res = new User();
         res = (User) criteria.add(Restrictions.eq("id", id)).uniqueResult();
+        session.close();
+        return res;
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        Session session = getSession();
+        Criteria criteria = session.createCriteria(User.class);
+        User res = new User();
+        res = (User) criteria.add(Restrictions.eq("email", email)).uniqueResult();
         session.close();
         return res;
     }
@@ -94,7 +104,7 @@ public class UserHibernateDAO implements UserDAO {
     }
 
     @Override
-    public void deletUser(Long id) {
+    public void deleteUser(Long id) {
         Session session = getSession();
         User user = getUserById(id);
         Transaction trx = null;
@@ -115,7 +125,7 @@ public class UserHibernateDAO implements UserDAO {
     }
 
     @Override
-    public void deletAllUsers() {
+    public void deleteAllUsers() {
         Transaction trx = null;
         Session session = getSession();
         try {

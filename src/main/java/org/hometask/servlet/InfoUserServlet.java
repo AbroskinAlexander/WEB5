@@ -2,7 +2,7 @@ package org.hometask.servlet;
 
 import org.hometask.model.User;
 import org.hometask.service.UserService;
-import org.hometask.service.UserServiceImp;
+import org.hometask.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,23 +13,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/update")
-public class UserUpdateServlet extends HttpServlet {
+@WebServlet("/user")
+public class InfoUserServlet extends HttpServlet {
 
     private UserService serv;
 
     @Override
     public void init() throws ServletException {
-        serv = UserServiceImp.getInstance();
+        serv = UserServiceImpl.getInstance();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Long id = Long.parseLong(req.getParameter("id"));
+        Long id = (Long)req.getSession().getAttribute("user");
         List<User> newUser = new ArrayList<>();
-        newUser.add(serv.getUserById(id));
+        newUser.add(serv.getUserById(id
+        ));
         req.setAttribute("user", newUser);
-        getServletContext().getRequestDispatcher("/UserUpdatePage.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/UserUpdateUserPage.jsp").forward(req, resp);
     }
 
     @Override
@@ -42,7 +43,8 @@ public class UserUpdateServlet extends HttpServlet {
         newUser.setSurname(req.getParameter("surname"));
         newUser.setPassword(req.getParameter("password"));
         newUser.setBirthday(req.getParameter("date"));
+        newUser.setRole(req.getParameter("role"));
         serv.updateUser(newUser);
-        resp.sendRedirect("/");
+        resp.sendRedirect("/user");
     }
 }

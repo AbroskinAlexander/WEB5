@@ -3,7 +3,7 @@ package org.hometask.servlet;
 
 import org.hometask.model.User;
 import org.hometask.service.UserService;
-import org.hometask.service.UserServiceImp;
+import org.hometask.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/")
-public class UserMainServlet extends HttpServlet {
+@WebServlet("/admin")
+public class MainUserServlet extends HttpServlet {
 
     private UserService serv;
 
     @Override
     public void init() throws ServletException {
-        serv = UserServiceImp.getInstance();
+        serv = UserServiceImpl.getInstance();
     }
 
     @Override

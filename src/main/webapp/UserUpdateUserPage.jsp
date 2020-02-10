@@ -5,14 +5,16 @@
   Time: 22:48
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="org.hometask.model.User" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>UserUpdate</title>
 </head>
 <body>
-<form class="your-form-selector" method="post" action="/update">
+<form class="your-form-selector" method="post" action="/user">
     <table width="100%" cellspacing="0" cellpadding="4">
     <c:forEach var="list" items="${user}">
         <tr>
@@ -43,6 +45,13 @@
         <tr>
             <td align="right" width="100">Дата рождения:</td>
             <td><input type="date" name="date" value=${list.birthday} required placeholder></td>
+        </tr>
+        <tr>
+            <td align="right" width="150">Тип пользователя:</td>
+            <td><input type="text" name="role" value=${list.role} readonly >
+
+
+            </td>
         </tr>
         <tr>
             <td></td>

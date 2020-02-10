@@ -40,6 +40,14 @@
             <td><input type="date" name="date" required placeholder></td>
         </tr>
         <tr>
+            <td align="right" width="150">Тип пользователя:</td>
+            <td><select name="role" >
+                    <option>user</option>
+                    <option>admin</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td></td>
             <td><input type="submit" value="Добавить пользователя"></td>
         </tr>
@@ -49,14 +57,15 @@
 </br>
 
 <p><b>Список зарегистрированных пользователей:</b></p>
-<table border="" width="500" cellspacing="1" cellpadding="4">
+<table border="" width="600" cellspacing="1" cellpadding="4">
     <tr>
         <td align="center">ID</td>
-        <td align="center" >Email</td>
+        <td align="center">Email</td>
         <td align="center">Имя</td>
         <td align="center">Фамилия</td>
         <td align="center">Пароль</td>
         <td align="center">День рождения</td>
+        <td align="center">Тип пользователя</td>
         <td align="center">Удалить/Изменить</td>
     </tr>
     <c:forEach var="list" items="${users}">
@@ -68,12 +77,13 @@
             <td align="center">${list.surname}</td>
             <td align="center">${list.password}</td>
             <td align="center">${list.birthday}</td>
+            <td align="center">${list.role}</td>
             <td align="center">
-                <form method="post" action="/delete">
+                <form method="post" action="/admin/delete">
                     <input type="hidden" name="id" value=${list.id}>
                     <input type="submit" value="Delete">
                 </form>
-                <form method="get" action="/update">
+                <form method="get" action="/admin/update">
                     <input type="hidden" name="id" value=${list.id}>
                     <input type="submit" value="Update">
                 </form>

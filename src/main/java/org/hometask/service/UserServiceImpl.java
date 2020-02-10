@@ -6,43 +6,54 @@ import org.hometask.model.User;
 
 import java.util.List;
 
-public class UserServiceImp implements UserService {
-    private static UserServiceImp userServiceImp;
+public class UserServiceImpl implements UserService {
+    private static UserServiceImpl userServiceImpl;
     private UserDAO userDao;
 
-    private UserServiceImp() {
+    private UserServiceImpl() {
         userDao = UserDaoFactory.getInstance().getUserDaoFactory();
     }
 
-    public static UserServiceImp getInstance() {
-        if (userServiceImp == null) {
-            userServiceImp = new UserServiceImp();
-            return userServiceImp;
+    public static UserServiceImpl getInstance() {
+        if (userServiceImpl == null) {
+            userServiceImpl = new UserServiceImpl();
+            return userServiceImpl;
         }
-        return userServiceImp;
+        return userServiceImpl;
     }
 
+    @Override
     public boolean addUser(User user) {
         return userDao.addUser(user);
     }
 
+    @Override
     public List<User> getAllUser() {
         return userDao.getAllUser();
     }
 
+    @Override
     public User getUserById(Long id) {
         return userDao.getUserById(id);
     }
 
+    @Override
     public boolean userExist(User user) {
         return userDao.userExist(user);
     }
 
+    @Override
     public void updateUser(User user) {
         userDao.updateUser(user);
     }
 
-    public void deletUser(Long id) {
-        userDao.deletUser(id);
+    @Override
+    public void deleteUser(Long id) {
+        userDao.deleteUser(id);
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return userDao.getUserByEmail(email);
     }
 }

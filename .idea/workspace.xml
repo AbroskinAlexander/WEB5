@@ -7,58 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0e393ff-af45-4767-86b7-ab6b8d285fb6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b13fea9-0705-45f8-a004-d209434c9040.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b13fea9-0705-45f8-a004-d209434c9040.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserHibernateDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserHibernateDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserJdbcDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/dao/UserJdbcDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserMainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserUpdateServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/util/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/util/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserMainPage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserUpdatePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/dao/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/dao/UserHibernateDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/dao/UserJdbcDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/service/UserServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/servlet/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/servlet/UserAddServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/servlet/UserDeleteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/servlet/UserUpdateServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/classes/org/hometask/util/DBHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/hibernate-commons-annotations-4.0.5.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/hibernate-core-4.3.10.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jandex-1.1.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/javassist-3.18.1-GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jsp-api-2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/mysql-connector-java-8.0.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/protobuf-java-3.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/servlet-api-2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/WEB-INF/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/test.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WEB5-0.1/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/dao/UserDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/dao/UserHibernateDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/dao/UserJdbcDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/service/UserServiceImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/servlet/MainServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/servlet/UserAddServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/servlet/UserDeleteServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/servlet/UserUpdateServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/hometask/util/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/AddUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/DeleteUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserMainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/MainUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UserUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hometask/servlet/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserMainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserMainPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/UserUpdatePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/UserUpdateAdminPage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +58,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="web5: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="web5: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -106,6 +76,7 @@
       <list>
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -147,15 +118,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyProject\WEB5\src\main\webapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MyProject\WEB5\src\main\webapp" />
     </key>
@@ -323,15 +299,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -350,7 +317,9 @@
       <option name="presentableId" value="Default" />
       <updated>1580912156008</updated>
       <workItem from="1580912157290" duration="40280000" />
-      <workItem from="1581017771619" duration="64079000" />
+      <workItem from="1581017771619" duration="65749000" />
+      <workItem from="1581275946126" duration="12712000" />
+      <workItem from="1581334483884" duration="12423000" />
     </task>
     <servers />
   </component>
@@ -378,10 +347,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="380" y="519" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581191913144" />
-    <state x="445" y="402" key="#com.intellij.ide.util.MemberChooser" timestamp="1581186839572">
+    <state x="445" y="402" key="#com.intellij.ide.util.MemberChooser" timestamp="1581354657542">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="445" y="402" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581186839572" />
+    <state x="445" y="402" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581354657542" />
     <state x="369" y="499" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580915701584">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -394,78 +363,82 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1104" y="635" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581088619862" />
-    <state x="859" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581089756423">
+    <state x="859" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581330947259">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="859" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581089756423" />
+    <state x="859" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581330947259" />
+    <state x="1035" y="414" key="#xdebugger.evaluate" timestamp="1581351192320">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1035" y="414" key="#xdebugger.evaluate/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581351192320" />
     <state x="420" y="453" key="FileChooserDialogImpl" timestamp="1580918112660">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="420" y="453" key="FileChooserDialogImpl/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1580918112660" />
-    <state width="1741" height="316" key="GridCell.Tab.0.bottom" timestamp="1581266095781">
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom" timestamp="1581356478474">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.0.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095781" />
-    <state width="1741" height="316" key="GridCell.Tab.0.center" timestamp="1581266095781">
+    <state width="2517" height="394" key="GridCell.Tab.0.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356478474" />
+    <state width="2517" height="394" key="GridCell.Tab.0.center" timestamp="1581356478474">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.0.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095781" />
-    <state width="1741" height="316" key="GridCell.Tab.0.left" timestamp="1581266095781">
+    <state width="2517" height="394" key="GridCell.Tab.0.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356478474" />
+    <state width="2517" height="394" key="GridCell.Tab.0.left" timestamp="1581356478474">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.0.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095781" />
-    <state width="1741" height="316" key="GridCell.Tab.0.right" timestamp="1581266095781">
+    <state width="2517" height="394" key="GridCell.Tab.0.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356478474" />
+    <state width="2517" height="394" key="GridCell.Tab.0.right" timestamp="1581356478474">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.0.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095781" />
-    <state width="1741" height="316" key="GridCell.Tab.1.bottom" timestamp="1581266095566">
+    <state width="2517" height="394" key="GridCell.Tab.0.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356478474" />
+    <state width="1741" height="314" key="GridCell.Tab.1.bottom" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.1.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.1.center" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.1.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.1.center" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.1.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.1.left" timestamp="1581266095565">
+    <state width="1741" height="314" key="GridCell.Tab.1.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.1.left" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.1.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095565" />
-    <state width="1741" height="316" key="GridCell.Tab.1.right" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.1.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.1.right" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.1.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.2.bottom" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.1.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.2.bottom" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.2.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.2.center" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.2.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.2.center" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.2.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.2.left" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.2.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.2.left" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.2.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="1741" height="316" key="GridCell.Tab.2.right" timestamp="1581266095566">
+    <state width="1741" height="314" key="GridCell.Tab.2.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.2.right" timestamp="1581356134077">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="1741" height="316" key="GridCell.Tab.2.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581266095566" />
-    <state width="843" height="246" key="GridCell.Tab.3.bottom" timestamp="1581196101329">
+    <state width="1741" height="314" key="GridCell.Tab.2.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356134077" />
+    <state width="1741" height="314" key="GridCell.Tab.3.bottom" timestamp="1581356112811">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="843" height="246" key="GridCell.Tab.3.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581196101329" />
-    <state width="843" height="246" key="GridCell.Tab.3.center" timestamp="1581196101329">
+    <state width="1741" height="314" key="GridCell.Tab.3.bottom/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356112811" />
+    <state width="1741" height="314" key="GridCell.Tab.3.center" timestamp="1581356112811">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="843" height="246" key="GridCell.Tab.3.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581196101329" />
-    <state width="843" height="246" key="GridCell.Tab.3.left" timestamp="1581196101329">
+    <state width="1741" height="314" key="GridCell.Tab.3.center/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356112811" />
+    <state width="1741" height="314" key="GridCell.Tab.3.left" timestamp="1581356112811">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="843" height="246" key="GridCell.Tab.3.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581196101329" />
-    <state width="843" height="246" key="GridCell.Tab.3.right" timestamp="1581196101329">
+    <state width="1741" height="314" key="GridCell.Tab.3.left/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356112811" />
+    <state width="1741" height="314" key="GridCell.Tab.3.right" timestamp="1581356112811">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state width="843" height="246" key="GridCell.Tab.3.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581196101329" />
+    <state width="1741" height="314" key="GridCell.Tab.3.right/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581356112811" />
     <state x="143" y="354" key="SettingsEditor" timestamp="1580996616094">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
@@ -482,9 +455,27 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1154" y="485" key="com.intellij.database.view.ui.DbObjectDialog/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1580919966006" />
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1581092006403">
+    <state x="414" y="186" width="1235" height="1106" key="new project wizard" timestamp="1581276414420">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581092006403" />
+    <state x="414" y="186" width="1235" height="1106" key="new project wizard/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581276414420" />
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup" timestamp="1581352354358">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="943" y="317" width="672" height="678" key="search.everywhere.popup/0.0.2560.1410/2560.232.1920.1170@0.0.2560.1410" timestamp="1581352354358" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/hometask/dao/UserJdbcDAO.java</url>
+          <line>89</line>
+          <properties class="org.hometask.dao.UserJdbcDAO" method="getUserByEmail">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
