@@ -26,24 +26,24 @@ public class UpdateUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Long id = Long.parseLong(req.getParameter("id"));
-        List<User> newUser = new ArrayList<>();
-        newUser.add(serv.getUserById(id));
-        req.setAttribute("user", newUser);
+        List<User> user = new ArrayList<>();
+        user.add(serv.getUserById(id));
+        req.setAttribute("user", user);
         getServletContext().getRequestDispatcher("/UserUpdateAdminPage.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        User newUser = new User();
-        newUser.setId(Long.parseLong(req.getParameter("id")));
-        newUser.setEmail(req.getParameter("email"));
-        newUser.setName(req.getParameter("name"));
-        newUser.setSurname(req.getParameter("surname"));
-        newUser.setPassword(req.getParameter("password"));
-        newUser.setBirthday(req.getParameter("date"));
-        newUser.setRole(req.getParameter("role"));
-        serv.updateUser(newUser);
+        User updateUser = new User();
+        updateUser.setId(Long.parseLong(req.getParameter("id")));
+        updateUser.setEmail(req.getParameter("email"));
+        updateUser.setName(req.getParameter("name"));
+        updateUser.setSurname(req.getParameter("surname"));
+        updateUser.setPassword(req.getParameter("password"));
+        updateUser.setBirthday(req.getParameter("date"));
+        updateUser.setRole(req.getParameter("role"));
+        serv.updateUser(updateUser);
         resp.sendRedirect("/admin");
     }
 }

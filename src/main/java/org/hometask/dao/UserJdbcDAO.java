@@ -104,7 +104,7 @@ public class UserJdbcDAO implements UserDAO {
             e.printStackTrace();
 
         }
-        return new User();
+        return null;
     }
 
     public void updateUser(User updateUser) {

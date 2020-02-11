@@ -30,20 +30,18 @@ public class LoginUserServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        User newUser = serv.getUserByEmail(email);
-        if (password.equals(newUser.getPassword())) {
-            req.getSession().setAttribute("role", newUser.getRole());
-            if (newUser.getRole().equals("admin")) {
-                req.getSession().setAttribute("user", newUser.getId());
-                resp.sendRedirect("/admin");
+        User userByEmail = serv.getUserByEmail(email);
+        req.setAttribute("status", "Не верный логин или пароль");
+        if (userByEmail != null) {
+            if (password.equals(userByEmail.getPassword())) {
+                req.getSession().setAttribute("role", userByEmail.getRole());
+                req.getSession().setAttribute("userId", userByEmail.getId());
+                resp.sendRedirect("/");
             } else {
-                req.getSession().setAttribute("user", newUser.getId());
-                resp.sendRedirect("/user");
+                getServletContext().getRequestDispatcher("/UserLoginPage.jsp").forward(req, resp);
             }
         } else {
-            req.setAttribute("status", "Не верный логин или пароль");
             getServletContext().getRequestDispatcher("/UserLoginPage.jsp").forward(req, resp);
         }
-
     }
 }

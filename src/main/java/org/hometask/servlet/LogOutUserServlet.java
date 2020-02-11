@@ -14,7 +14,7 @@ public class LogOutUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String role = (String) req.getSession().getAttribute("role");
         if (role!=null){
-            req.getSession().setAttribute("role",null);
+            req.getSession().invalidate();
             resp.sendRedirect("/");
         }
     }

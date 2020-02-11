@@ -30,7 +30,7 @@ public class AddUserServlet extends HttpServlet {
         String role = req.getParameter("role");
         User newUser = new User(email,name, surname, password, birthday,role);
         serv.addUser(newUser);
-        resp.sendRedirect("/");
+        resp.sendRedirect("/admin");
     }
 
 }

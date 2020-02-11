@@ -41,8 +41,9 @@ public class UserHibernateDAO implements UserDAO {
             } catch (Exception e) {
                 e.printStackTrace();
                 if (trx != null) {
+                    trx.rollback();
                 }
-                trx.rollback();
+
             } finally {
                 session.close();
             }
@@ -69,7 +70,7 @@ public class UserHibernateDAO implements UserDAO {
     public User getUserById(Long id) {
         Session session = getSession();
         Criteria criteria = session.createCriteria(User.class);
-        User res = new User();
+        User res = null;
         res = (User) criteria.add(Restrictions.eq("id", id)).uniqueResult();
         session.close();
         return res;
@@ -79,7 +80,7 @@ public class UserHibernateDAO implements UserDAO {
     public User getUserByEmail(String email) {
         Session session = getSession();
         Criteria criteria = session.createCriteria(User.class);
-        User res = new User();
+        User res = null;
         res = (User) criteria.add(Restrictions.eq("email", email)).uniqueResult();
         session.close();
         return res;
